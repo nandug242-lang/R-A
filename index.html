@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R A — Rythu Aasara</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="toast" class="toast"></div>
+  <section id="auth" class="auth">
+    <div class="brand"><img class="brand-logo-img" src="ra_brand.png" alt="Rythu Aasara"><h1>R A</h1><p>రైతుకు అవసరంలో అండ</p></div>
+    <div class="auth-card">
+      <div class="tabs"><button class="tab active" data-auth="login">Login</button><button class="tab" data-auth="register">Create Account</button></div>
+      <form id="authForm">
+        <div id="registerFields" class="hidden">
+          <label>Full Name<input id="name" placeholder="Your name"></label>
+          <label>User type<select id="role"><option value="farmer">Farmer</option><option value="supporter">Supporter / Donor</option></select></label>
+          <label>District<input id="district" placeholder="District"></label>
+          <label>Village<input id="village" placeholder="Village"></label>
+        </div>
+        <label>Mobile Number<input id="phone" placeholder="10-digit mobile number"></label>
+        <label>Email (optional)<input id="email" type="email" placeholder="you@example.com"></label>
+        <label>Password<input id="password" type="password" placeholder="Password"></label>
+        <button class="primary full" type="submit">Continue</button>
+      </form>
+      <p class="demo">Demo: any valid-looking mobile/password works. Data is stored locally in this prototype.</p>
+    </div>
+  </section>
+
+  <section id="main" class="hidden">
+    <header class="topbar">
+      <div class="brand-mini"><span class="logo small">🌱</span><b>R A</b></div>
+      <div class="top-actions"><button id="voiceBtn" class="icon-btn" title="Voice input">🎙️</button><button id="notifyBtn" class="icon-btn">🔔</button><button id="profileBtn" class="avatar">U</button></div>
+    </header>
+
+    <main id="content"></main>
+
+    <nav class="bottom-nav">
+      <button data-page="home" class="nav active">🏠<span>Home</span></button>
+      <button data-page="help" class="nav">🌾<span>Help</span></button>
+      <button data-page="donate" class="nav">❤️<span>Donate</span></button>
+      <button data-page="notifications" class="nav">🔔<span>Alerts</span></button>
+      <button data-page="profile" class="nav">👤<span>Profile</span></button>
+    </nav>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
