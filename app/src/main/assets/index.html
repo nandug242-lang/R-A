@@ -4,14 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R A - Rythu Aasara</title>
-</head>
-<body>
-    <h1>🌾 R A</h1>
-    <h2>Rythu Aasara</h2>
-    <p>Welcome, Farmer!</p>
 
-    <button>👨‍🌾 Farmer</button>
-    <button>🤝 Donate</button>
-    <button>🆘 I Need Help</button>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f8f1;
+            color: #1b3d1b;
+        }
+
+        .header {
+            background: #2e7d32;
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            border-radius: 0 0 25px 25px;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 8px;
+        }
+
+        .header h1 {
+            margin: 12px 0 5px;
+            font-size: 28px;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .welcome {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 18px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: bold;
+            background: #388e3c;
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .help {
+            background: #d84315;
+        }
+
+        .donate {
+            background: #1565c0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <img src="ra_logo.png" class="logo">
+
+        <h1>R A</h1>
+        <p>Rythu Aasara</p>
+
+    </div>
+
+    <div class="container">
+
+        <div class="welcome">
+            🌾 Welcome, Farmer!
+        </div>
+
+        <div class="card">
+            <h2>👨‍🌾 Farmer</h2>
+            <p>Get help, information and support for your farming needs.</p>
+
+            <button onclick="farmerHelp()">
+                I Need Help
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>🤝 Donate</h2>
+            <p>Help farmers by donating useful farming items or support.</p>
+
+            <button class="donate" onclick="donate()">
+                Donate
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Farming Information</h2>
+            <p>Crop, farming and government scheme information.</p>
+
+            <button onclick="information()">
+                View Information
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>🆘 Emergency Help</h2>
+            <p>Request urgent assistance from the community.</p>
+
+            <button class="help" onclick="emergency()">
+                Request Help
+            </button>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 R A - Rythu Aasara
+    </div>
+
+    <script>
+
+        function farmerHelp() {
+            alert("Farmer Help section coming next.");
+        }
+
+        function donate() {
+            alert("Donate section coming next.");
+        }
+
+        function information() {
+            alert("Farming Information section coming next.");
+        }
+
+        function emergency() {
+            alert("Emergency Help section coming next.");
+        }
+
+    </script>
+
 </body>
-</html>
+    </html>
