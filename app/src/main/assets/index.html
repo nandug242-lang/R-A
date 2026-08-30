@@ -1,178 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R A - Rythu Aasara</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<title>Rythu Aasara</title>
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f8f1;
-            color: #1b3d1b;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        .header {
-            background: #2e7d32;
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-            border-radius: 0 0 25px 25px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f8f1;
+    color: #173d20;
+}
 
-        .logo {
-            width: 90px;
-            height: 90px;
-            object-fit: contain;
-            background: white;
-            border-radius: 50%;
-            padding: 8px;
-        }
+.header {
+    background: #ffffff;
+    padding: 18px 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
 
-        .header h1 {
-            margin: 12px 0 5px;
-            font-size: 28px;
-        }
+.logo {
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+    border-radius: 50%;
+}
 
-        .header p {
-            margin: 0;
-            font-size: 16px;
-        }
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 8px;
+}
 
-        .container {
-            padding: 20px;
-        }
+.subtitle {
+    font-size: 16px;
+    color: #52705a;
+    margin-top: 5px;
+}
 
-        .welcome {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 18px;
-        }
+.welcome {
+    padding: 22px 18px 10px;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 18px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-        }
+.welcome h2 {
+    margin: 0;
+    font-size: 23px;
+}
 
-        button {
-            width: 100%;
-            padding: 16px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 12px;
-            font-size: 17px;
-            font-weight: bold;
-            background: #388e3c;
-            color: white;
-        }
+.welcome p {
+    color: #5d6f62;
+}
 
-        button:active {
-            transform: scale(0.98);
-        }
+.cards {
+    padding: 10px 18px 25px;
+}
 
-        .help {
-            background: #d84315;
-        }
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+}
 
-        .donate {
-            background: #1565c0;
-        }
+.card-icon {
+    font-size: 35px;
+}
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 13px;
-        }
-    </style>
+.card h3 {
+    margin: 10px 0 6px;
+    font-size: 20px;
+}
+
+.card p {
+    margin: 0 0 15px;
+    color: #657267;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: bold;
+    background: #238636;
+    color: white;
+}
+
+.help {
+    background: #c62828;
+}
+
+.donate {
+    background: #e68a00;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #718074;
+    font-size: 13px;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="header">
+<div class="header">
+    <img src="ra_logo.png" class="logo" alt="Rythu Aasara Logo">
+    <div class="title">Rythu Aasara</div>
+    <div class="subtitle">రైతు ఆసరా</div>
+</div>
 
-        <img src="ra_logo.png" class="logo">
+<div class="welcome">
+    <h2>Welcome, Farmer 👨‍🌾</h2>
+    <p>Farmers helping farmers — together we grow.</p>
+</div>
 
-        <h1>R A</h1>
-        <p>Rythu Aasara</p>
+<div class="cards">
 
+    <div class="card">
+        <div class="card-icon">👨‍🌾</div>
+        <h3>Farmer</h3>
+        <p>Get farming support, information and assistance.</p>
+        <button onclick="farmer()">Continue as Farmer</button>
     </div>
 
-    <div class="container">
-
-        <div class="welcome">
-            🌾 Welcome, Farmer!
-        </div>
-
-        <div class="card">
-            <h2>👨‍🌾 Farmer</h2>
-            <p>Get help, information and support for your farming needs.</p>
-
-            <button onclick="farmerHelp()">
-                I Need Help
-            </button>
-        </div>
-
-        <div class="card">
-            <h2>🤝 Donate</h2>
-            <p>Help farmers by donating useful farming items or support.</p>
-
-            <button class="donate" onclick="donate()">
-                Donate
-            </button>
-        </div>
-
-        <div class="card">
-            <h2>🌱 Farming Information</h2>
-            <p>Crop, farming and government scheme information.</p>
-
-            <button onclick="information()">
-                View Information
-            </button>
-        </div>
-
-        <div class="card">
-            <h2>🆘 Emergency Help</h2>
-            <p>Request urgent assistance from the community.</p>
-
-            <button class="help" onclick="emergency()">
-                Request Help
-            </button>
-        </div>
-
+    <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>Donate</h3>
+        <p>Help a farmer by donating useful items or support.</p>
+        <button class="donate" onclick="donate()">Donate</button>
     </div>
 
-    <div class="footer">
-        © 2026 R A - Rythu Aasara
+    <div class="card">
+        <div class="card-icon">🆘</div>
+        <h3>I Need Help</h3>
+        <p>Request help for your farming needs.</p>
+        <button class="help" onclick="needHelp()">I Need Help</button>
     </div>
 
-    <script>
+</div>
 
-        function farmerHelp() {
-            alert("Farmer Help section coming next.");
-        }
+<div class="footer">
+    © 2026 Rythu Aasara
+</div>
 
-        function donate() {
-            alert("Donate section coming next.");
-        }
+<script>
 
-        function information() {
-            alert("Farming Information section coming next.");
-        }
+function farmer() {
+    alert("Farmer section coming next.");
+}
 
-        function emergency() {
-            alert("Emergency Help section coming next.");
-        }
+function donate() {
+    alert("Donation section coming next.");
+}
 
-    </script>
+function needHelp() {
+    alert("Help request section coming next.");
+}
+
+</script>
 
 </body>
-    </html>
+</html>
